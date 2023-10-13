@@ -1,0 +1,160 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: gilroy;
+    text-decoration: none;
+}
+html,body{
+    width: 100%;
+    /* height: 100%; */
+    /* overflow: hidden; */
+}
+#main{
+    width: 100%;
+    background-color: aqua;
+    /* height: 100%; */
+    overflow: hidden;
+}
+/* // file open  */
+#file-open{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    background-color: #313131b0;
+}
+.file-nav{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    /* background-color: blueviolet; */
+}
+.file-nav p{
+    display: flex;
+    align-items: center;
+    color: white;
+    font-weight: 600;
+    gap: 15px;
+    font-size: 1.2vmax;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+}
+.file-nav i{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4vmax;
+    cursor: pointer;
+    transition: all ease .15s;
+    /* background-color: rgba(130, 130, 130, 0.952); */
+}
+.file-nav img{
+    width: 25px;
+}
+.file-nav svg{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    transition: all ease .15s;
+    cursor: pointer;
+}
+.file-nav svg:hover,.file-nav i:hover{
+    background-color: rgba(130, 130, 130, 0.952);
+}
+.file-nav-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}.file-nav-right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    justify-content: right;
+}
+#file-open .arrow{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    /* background-color: #e3ecff; */
+    align-items: center;
+    padding: 0 20px;
+    justify-content: space-between;
+    transform: translate(-50%,-50%);
+}
+#file-open .arrow i{
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(151, 151, 151, 0.614);
+    color: white;
+    font-size: 2vmax;
+    flex-shrink: 0;
+    border-radius: 50%;
+    cursor: pointer;
+}#file-open .arrow i:hover{
+    background-color: rgba(90, 90, 90, 0.747);
+}
+#file-open .file-img{
+    min-width: 50vh;
+    height: 85%;
+    max-height: 95%;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#file-open .file-video{
+    min-width: 50vh;
+    max-width: 90%;
+    height: 85%;
+    max-height: 95%;
+    object-fit: cover;
+    object-position: center;
+    /* background-color: aqua; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#file-open .file-size{
+    /* width: 15vh; */
+    height: 5vh;
+    display: flex;
+    align-items: center;
+    padding: 20px 20px;
+    justify-content: center;
+    gap: 20px;
+    position: absolute;
+    bottom: 1vh;
+    border-radius: 50px;
+    left: 50%;
+    font-size: 2.2vmax;
+    background-color: #1F1F1F;
+    color: white;
+    transform: translate(-50%,0);
+}
+#file-open .file-size span{
+    cursor: pointer;
+}
+#file-open .file-size svg{
+    width: 25px;
+    fill: gray;
+}
