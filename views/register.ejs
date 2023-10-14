@@ -35,7 +35,14 @@
             </div>
             <div class="bottom-right item">
                 <h2>Register</h2>
-                <form action="/register" method="post">
+                <form action="/register" method="post" enctype="multipart/form-data">
+                    <div class="items">
+                        <div class="profile-image1">
+                            <img src="https://cdn-icons-png.flaticon.com/512/5087/5087579.png" alt="" class="">
+                            <i class="ri-add-circle-fill"></i>
+                        </div>
+                        <input type="file" class="input1" name="profileImg" accept="image/jpeg, image/png, image/jpg, image/gif, image/webp" required>
+                    </div>
                     <div class="input-item">
                         <label for="">Fullname</label>
                         <input type="text" placeholder="Enter Fullname" name="username" required>
@@ -59,5 +66,23 @@
             </div>
         </div>
     </div>
+
+
+    <!-- // script file  -->
+    <script>
+        var profileInput = document.querySelector(".items input");
+        var profileImg = document.querySelector(".profile-image1 img");
+
+        document.querySelector(".items").addEventListener("click",(elem)=>{
+            // console.log(elem.target.className)
+            if(elem.target.className === "ri-add-circle-fill"){
+                profileInput.click();
+            }
+        })
+        profileInput.addEventListener("change",()=>{
+            console.log(URL.createObjectURL(profileInput.files[0]))
+            profileImg.src = URL.createObjectURL(profileInput.files[0])
+        })
+    </script>
 </body>
 </html>
