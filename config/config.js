@@ -1,5 +1,6 @@
 const {MongoClient} = require('mongodb');
-const url = 'mongodb://localhost:27017';
+require("dotenv").config()
+const url = process.env.MONGODB_URL;
 const database = 'Google-Drive';
 const client =  new MongoClient(url);
 async function MongoDb(){

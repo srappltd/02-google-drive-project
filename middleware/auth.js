@@ -1,5 +1,3 @@
-const {UserModel} = require("../models/user-model");
-
 const isLogin = async(req, res, next)=>{
     try {
         
@@ -20,6 +18,7 @@ const isLogout = async(req, res, next)=>{
         if(req.session.user){
             res.redirect(`/deshboard`);
         }else{
+            
             
         }
         next();
